@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Layout y Grid — Gestión de Póliza de Seguro</title>
+</head>
+<body>
+  <header>
+    <h1>Gestión de Pólizas de Seguro — Layout y Grid</h1>
+    <p>Organización estructural de pólizas — sin CSS (solo HTML)</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#flex">Sección Pólizas Flex</a></li>
+      <li><a href="#grid">Sección Pólizas Grid</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main id="inicio">
+    <section id="flex">
+      <h2>Diseño tipo Flexbox para Pólizas</h2>
+      <p>
+        Este bloque representa la información de las pólizas de seguro organizada en un layout flexible.
+        Contiene la sección principal de pólizas y un <em>aside</em> lateral con información adicional.
+      </p>
+
+      <article>
+        <h3>Contenido Principal de Pólizas</h3>
+        <p>
+          Aquí se mostrará la información de las pólizas: clientes, tipo de seguro, fecha de vigencia y estado.
+          Con Flexbox, este contenido podrá ocupar más espacio horizontal mientras el <code>&lt;aside&gt;</code> contiene avisos o enlaces importantes.
+        </p>
+      </article>
+
+      <aside>
+        <h3>Aside de Información</h3>
+        <p>
+          Contenido adicional relacionado con las pólizas de seguro, formularios de actualización o alertas importantes.
+          En pantallas pequeñas, se mostrará debajo del artículo principal.
+        </p>
+      </aside>
+      <p><a href="#grid">Ir a la sección Grid ↓</a></p>
+    </section>
+
+    <hr>
+
+    <section id="grid">
+      <h2>Diseño tipo Grid para Pólizas</h2>
+      <p>
+        Ejemplo de cómo organizar la información de pólizas en un contenedor tipo cuadrícula.
+      </p>
+
+      <div class="grid-container">
+        <header>
+          <h3>Encabezado del Grid de Pólizas</h3>
+        </header>
+
+        <nav>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#flex">Flexbox</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <main>
+          <h3>Contenido Principal de Grid</h3>
+          <p>
+            Área central que muestra las pólizas activas, su tipo, cliente, fecha de inicio y cobertura.
+            Con CSS Grid, esta sección puede ocupar varias columnas para mayor claridad.
+          </p>
+        </main>
+
+        <aside>
+          <h3>Aside del Grid</h3>
+          <p>Zona lateral para alertas, recomendaciones o avisos importantes sobre pólizas de seguro.</p>
+        </aside>
+
+        <footer>
+          <p>Pie de página del Grid © 2025 — Gestión de Pólizas de Seguro</p>
+        </footer>
+      </div>
+
+      <p><a href="#inicio">↑ Volver al inicio</a></p>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <p>Contacto: <a href="mailto:info@seguros.com">info@seguros.com</a></p>
+  </footer>
+
+</body>
+</html>
