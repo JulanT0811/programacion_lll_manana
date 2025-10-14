@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservación</title>
+</head>
+<body>
+  <header>
+    <h1>Reservación - Gestion de poliza de seguro JP</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="Tipos_de_seguro.html">Inicio</a></li>
+      <li><a href="Seguro_de_Vida.html">Seguro de Vida</a></li>
+      <li><a href="Seguro_de_Salud.html">Seguro de Salud</a></li>
+      <li><a href="Reservacion.html">Reservaciones</a></li>
+      <li><a href="informacion_de_seguros.html">informacion sobre el Seguro</a></li>
+    </ul>
+  </nav>
+  <hr>
+  <main>
+<section>
+  <h2>Formulario de solicitud de póliza de vida</h2>
+  <p>Por favor completa la siguiente información para solicitar tu <strong>Póliza de Seguro de Vida Cumbre</strong>.</p>
+
+  <form action="procesar_poliza.php" method="post">
+    <fieldset>
+      <legend>Datos del solicitante</legend>
+
+      <label for="nombre">Nombre completo:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="correo">Correo electrónico:</label><br>
+      <input type="email" id="correo" name="correo" required><br><br>
+
+      <label for="fecha">Fecha de nacimiento:</label><br>
+      <input type="date" id="fecha" name="fecha" required><br><br>
+
+      <label for="monto">Monto asegurado (USD):</label><br>
+      <input type="number" id="monto" name="monto" min="1000" max="1000000" required><br><br>
+
+      <p>Tipo de póliza:</p>
+      <input type="radio" id="vida_basica" name="tipo_poliza" value="B" required>
+      <label for="vida_basica">Vida Básica</label>
+      <input type="radio" id="vida_integral" name="tipo_poliza" value="I" required>
+      <label for="vida_integral">Vida Integral</label>
+      <br><br>
+      
+      <label for="pais">País de residencia:</label><br>
+      <select id="pais" name="pais" required>
+        <option value="">Seleccione...</option>
+        <option value="ec">Ecuador</option>
+        <option value="co">Colombia</option>
+        <option value="pe">Perú</option>
+      </select><br><br>
+
+      <label for="comentarios">Observaciones adicionales:</label><br>
+      <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea><br><br>
+
+      <label for="acepto">Acepto los <a href="docs/terminos_poliza.pdf" target="_blank" rel="noopener">
+      términos y condiciones</a></label> 
+      <input type="checkbox" id="acepto" name="acepto" required>
+      <br><br>
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpiar</button>
+    </fieldset>
+  </form>
+</section>
+<article>
+  <h3>Recuerda:</h3>
+  <p><em>Recuerda enviar tu solicitud con al menos 24 horas de anticipación para que podamos procesarla correctamente.</em></p>
+</article>
+</main>
+<p><a href="solicitud_poliza.html">↑ Volver al inicio</a></p>
+<footer>
+  <hr>
+  <p>
+    Gracias por confiar en nosotros
+    <br>
+     Seguros de Vida JP
+  </p>
+</footer>
+
+</body>
+</html>

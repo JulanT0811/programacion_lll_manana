@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion de poliza de seguro JP</title>
+</head>
+<body>
+  <header>
+    <h1>Gestion de poliza de seguro JP</h1>
+    <p>Disfruta de nuesto hermoso servicio </p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="Tipos_de_seguro.html">Inicio</a></li>
+      <li><a href="Seguro_de_Vida.html">Seguro de Vida</a></li>
+      <li><a href="Seguro_de_Salud.html">Seguro de Salud</a></li>
+      <li><a href="Reservacion.html">Reservaciones</a></li>
+      <li><a href="informacion_de_seguros.html">informacion sobre el Seguro</a></li>
+    </ul>
+  </nav>
+<main id="inicio">
+  <section id="flex">
+    <h2>Sistema de Gestión de Pólizas</h2>
+    <p>
+      Este bloque representa un módulo que luego puede adaptarse para mostrar información 
+      sobre pólizas de seguros. Su estructura contiene una zona principal de detalles de la póliza 
+      y un <em>aside</em> lateral con información complementaria.
+    </p>
+
+    <article>
+      <h3>Información principal de la póliza</h3>
+      <p>
+        Aquí irían los datos más importantes del seguro de vida: número de póliza, 
+        nombre del asegurado, tipo de cobertura, suma asegurada y vigencia. 
+        Con CSS Flexbox podrá organizarse para mostrar mejor cada campo.
+      </p>
+    </article>
+
+    <aside>
+      <h3>Aside o barra lateral</h3>
+      <p>
+        Información adicional como beneficiarios, estado de pago o enlaces a reportes. 
+        En pantallas pequeñas se ubicará debajo del artículo principal.
+      </p>
+    </aside>
+    <p><a href="#grid">Ir a la sección Grid ↓</a></p>
+  </section>
+
+  <hr>
+
+  <section id="grid">
+    <h2>Panel tipo Grid</h2>
+    <p>
+      Este ejemplo muestra cómo estructurar un contenedor que más adelante se dividirá 
+      en áreas de cuadrícula para organizar los módulos del sistema de pólizas.
+    </p>
+
+    <div class="grid-container">
+      <header>
+        <h3>Encabezado del Sistema</h3>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#flex">Pólizas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <h3>Gestión de Pólizas de Vida</h3>
+        <p>
+          Esta área sería la sección central del sistema, donde se muestran los registros 
+          de pólizas activas, vencidas o nuevas. Con CSS Grid, podría ocupar varias columnas 
+          para mostrar listados y formularios.
+        </p>
+      </main>
+
+      <aside>
+        <h3>Aside del Grid</h3>
+        <p>
+          Zona lateral o secundaria dentro del diseño, que puede incluir accesos directos 
+          a reportes, clientes o beneficiarios.
+        </p>
+      </aside>
+    </div>
+
+    <p><a href="#inicio">↑ Volver al inicio</a></p>
+  </section>
+</main>
+
+<footer id="contacto">
+  <p>Contacto: <a href="mailto:info@segurosvida.com">info@segurosvidaJP.com</a></p>
+</footer>
+
+</body>
+</html>
