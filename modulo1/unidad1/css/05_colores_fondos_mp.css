@@ -1,0 +1,11 @@
+.fondo {
+   color: rgb(243, 11, 11);
+   background-image: url(image.jpg);
+   background-size: cover;
+   background-position: center;
+   background-color: whitesmoke;
+   padding: 30px;
+   opacity: 1.9;
+   text-align: center;
+   font-size: 34px;
+}
