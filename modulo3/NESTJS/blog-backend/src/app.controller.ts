@@ -1,34 +1,12 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { BasicsService } from './basics.service';
+import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service';
 
-@Controller('basics')
-export class BasicsController {
-    constructor(private readonly basicsService: BasicsService) {}
+@Controller()
+export class AppController {
+  constructor(private readonly appService: AppService) {}
 
-        
-        @Get()
-        getMyFirstGet(): object {
-            return this.basicsService.getMyFirstGet();
-        }
-
-        @Get(':parametro')
-        getConParametros(@Param('parametro') parametro: string){
-            return this.basicsService.getConParametros(parametro);
-        }
-
-        @Post()
-        create(@Body() bodyPost: object) {
-            return this.basicsService.postFunction(bodyPost);
-        }
-
-        @Put(':id')
-        update(@Param('id') id: string, @Body() bodyPost: object) {
-            return this.basicsService.putFunction(bodyPost, id);
-        }
-
-        @Delete(':id')
-        delete(@Param('id') id: string) {
-            return this.basicsService.deleteFunction(id);
-        }
-
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
 }
