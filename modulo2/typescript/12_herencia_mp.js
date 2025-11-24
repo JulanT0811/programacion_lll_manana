@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var _11_herencia_mp_1 = require("./11_herencia_mp");
+var polizaAuto = new _11_herencia_mp_1.Poliza('Seguros Andes', 'Póliza de Auto');
+console.log(polizaAuto.aseguradora);
+console.log(polizaAuto.tipoPoliza);
+polizaAuto.procesarPoliza();
+var polizaVida = new _11_herencia_mp_1.PolizaVida('Seguros Quito', 'Póliza de Vida');
+console.log(polizaVida.aseguradora);
+console.log(polizaVida.tipoPoliza);
+polizaVida.procesarPoliza();

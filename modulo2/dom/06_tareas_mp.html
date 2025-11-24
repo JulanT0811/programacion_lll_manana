@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Pólizas de Seguros</title>
+  <style>
+    #cuadro {
+      width: 100px;
+      height: 100px;
+      background-color: #58a6ff;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Panel de Gestión de Pólizas</h1>
+
+  <div id="cuadro"></div>
+
+  <div style="margin-top:20px;">
+    <button onclick="cambiarColor()">📄 Cambiar Estado de Póliza</button>
+    <button onclick="aumentarTamano()">⬆️ Ampliar Cobertura</button>
+    <button onclick="reiniciar()">🔄 Reiniciar Póliza</button>
+  </div>
+
+  <script src="polizas.js"></script>
+</body>
+</html>
