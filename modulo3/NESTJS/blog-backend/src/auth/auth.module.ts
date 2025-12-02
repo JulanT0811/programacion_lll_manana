@@ -6,13 +6,13 @@ import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 import { JwtStrategy } from './jwt.strategy';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { UsersService } from 'src/users/users.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { fromFetch } from 'rxjs/fetch';
 import { User } from 'src/users/user.entity';
 
 @Module({
   imports: [
-    TypeOrmModule,fromFetch([ User]),
+    TypeOrmModule.forFeature([User]),
     UsersModule,
     PassportModule,
     ConfigModule.forRoot(),
@@ -26,6 +26,6 @@ import { User } from 'src/users/user.entity';
     }),
   ],
   controllers: [AuthController],
-  providers: [AuthService, JwtStrategy],
+  providers: [AuthService, JwtStrategy, UsersService],
 })
 export class AuthModule {}
