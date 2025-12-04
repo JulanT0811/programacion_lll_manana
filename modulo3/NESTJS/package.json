@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "nestjs-typeorm-paginate": "^4.1.0"
+    "axios": "^1.13.2",
+    "nestjs-typeorm-paginate": "^4.1.0",
+    "nodemailer": "^7.0.11"
   }
 }
