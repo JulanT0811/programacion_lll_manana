@@ -16,7 +16,7 @@ export class UsersService {
   constructor(
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
-  ) {}
+  ) { }
 
   async create(createUserDto: CreateUserDto): Promise<User | null> {
     try {
@@ -134,7 +134,7 @@ export class UsersService {
 
   async updateProfile(id: string, filename: string): Promise<User | null> {
     try {
-      const user = await this.findOne(id);
+      const user = await this.userRepository.findOne({ where: { id } });
       if (!user) return null;
 
       user.profile = filename;
