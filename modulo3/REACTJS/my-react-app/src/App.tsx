@@ -1,4 +1,4 @@
-import ButtonCounter from './components/ButtonCounter';
+/*import ButtonCounter from './components/ButtonCounter';
 import ColorBox from './components/ColorBox';
 import ConditionalText from './components/ConditionalText';
 import EmojiList from './components/EmojiList';
@@ -12,6 +12,8 @@ import { LanguageContext } from './useContext/LanguageContext';
 import LanguageToggle from './useContext/LanguageToggle';
 import { LoginContext } from './useContext/LoginContext';
 import LoginStatus from './useContext/LoginStatus';
+import CirculoColorido from './useRef/CirculoColorido';
+import FocoAutomatico from './useRef/FocoAutomatico';
 import AccessWithLimit from './useState/AccessWithLimit';
 import CheckboxSummary from './useState/CheckboxSummary';
 import DocumentTitleChanger from './useState/DocumentTitleChanger';
@@ -49,10 +51,23 @@ function App() {
       <LoginWithLimit/>
       <DocumentTitleChanger/>
       <CheckboxSummary/>
+      <FocoAutomatico/>
+      <CirculoColorido/>
       
       
     </>
   );
 }
 
+export default App;*/
+import ScrollDemo from "./useRef/ScrollDemo";
+
+function App(){
+  return (
+    <>
+      <ScrollDemo/>
+       
+    </>
+  );
+}
 export default App;
