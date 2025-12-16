@@ -8,6 +8,10 @@ import ShowDate from './components/ShowDate';
 import SimpleForm from './components/SimpleForm';
 import SimpleFormSuma from './components/SimpleFormSuma';
 import ToggleMessage from './components/ToggleMessage';
+import { LanguageContext } from './useContext/LanguageContext';
+import LanguageToggle from './useContext/LanguageToggle';
+import { LoginContext } from './useContext/LoginContext';
+import LoginStatus from './useContext/LoginStatus';
 import AccessWithLimit from './useState/AccessWithLimit';
 import CheckboxSummary from './useState/CheckboxSummary';
 import DocumentTitleChanger from './useState/DocumentTitleChanger';
@@ -19,6 +23,14 @@ import PostLikes from './useState/PostLikes';
 function App() {
   return (
     <>
+      <LanguageContext.Provider value={{ lang, toggleLanguage }}>
+      <LanguageToggle />
+      </LanguageContext.Provider>
+
+       <LoginContext.Provider value={{ isLoggedIn, toggleLogin }}>
+      <LoginStatus />
+    </LoginContext.Provider>
+    
       <HelloWorld/>
       <WelcomeUser/>
       <ButtonCounter/>
