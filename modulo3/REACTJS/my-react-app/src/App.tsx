@@ -60,13 +60,46 @@ function App() {
 }
 
 export default App;*/
+/*import ExpensiveCalc from "./useMemo/ExpensiveCalc";
+import FiltroLista from "./useMemo/FiltroLista";
+import PrimosMemo from "./useMemo/PrimosMemo";
+import TablaOrdenada from "./useMemo/TablaOrdenada";
 import ScrollDemo from "./useRef/ScrollDemo";
 
 function App(){
   return (
     <>
       <ScrollDemo/>
+      <ExpensiveCalc/>
+      <FiltroLista/>
+      <PrimosMemo/>
+      <TablaOrdenada/>
        
+       
+    </>
+  );
+}
+export default App;*/
+
+/*import BotonMemo from "./useCallback/BotonMemo";
+import Contador from "./useCallback/Contador";
+import ListaProps from "./useCallback/ListaProps";
+import ReRender from "./useCallback/ReRender";*/
+import LoginCampos from "./useId/LoginCampos";
+import MayorDeTres from "./useId/MayordeTres";
+import HorasTrabajadas from "./useState/HorasTrabajadas";
+import { BuscadorUseTransition } from "./useTransition/BuscadorUseTransition";
+
+
+function App(){
+  return (
+    <>
+      
+      <HorasTrabajadas/>
+      <useIdHook/>
+      <LoginCampos/>
+      <MayorDeTres/>
+      <BuscadorUseTransition/>
     </>
   );
 }
