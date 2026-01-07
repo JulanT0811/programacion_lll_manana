@@ -2,20 +2,20 @@
 import { useState } from 'react';
 
 export default function ClickHistory() {
-  const [count, setCount] = useState(0);
-   const [history, setHistory] = useState([]); 
+    const [count, setCount] = useState(0);
+    const [history, setHistory] = useState([]);
 
-  const handleClick = () => {
-    setCount(count + 1);
-    setHistory([...history, `Clic ${count + 1}`]);
-  };
+    const handleClick = () => {
+        setCount(count + 1);
+        setHistory([...history, `Clic ${count + 1}`]);
+    };
 
-  return (
-    <div>
-      <button onClick={handleClick}>Clic</button>
-      <ul>
-        {history.map((item, index) => <li key={index}>{item}</li>)}
-      </ul>
-    </div>
-  );
+    return (
+        <div>
+            <button onClick={handleClick}>Clic</button>
+            <ul>
+                {history.map((item, index) => <li key={index}>{item}</li>)}
+            </ul>
+        </div>
+    );
 }

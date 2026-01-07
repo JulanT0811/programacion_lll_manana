@@ -1,4 +1,4 @@
 export default function WelcomeUser() {
-  const name = "Francisco";
+  const name = "Santiago";
   return <p>Bienvenido, {name}</p>;
 }

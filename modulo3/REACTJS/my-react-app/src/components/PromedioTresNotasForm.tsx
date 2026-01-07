@@ -6,7 +6,7 @@ export default function PromedioTresNotasForm() {
     const [nota3, setNota3] = useState(0);
     const handleSubmit = (a: any) => {
         a.preventDefault();
-        alert(Promedio, ${(nota1 + nota2 + nota3) / 3});
+        alert(`Promedio, ${(nota1 + nota2 + nota3) / 3}`);
     }
 
     return (
