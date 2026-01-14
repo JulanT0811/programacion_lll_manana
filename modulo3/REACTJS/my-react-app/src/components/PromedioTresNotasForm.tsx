@@ -1,35 +1,35 @@
 import { useState } from 'react';
 
 export default function PromedioTresNotasForm() {
-    const [nota1, setNota1] = useState(0);
-    const [nota2, setNota2] = useState(0);
-    const [nota3, setNota3] = useState(0);
-    const handleSubmit = (a: any) => {
-        a.preventDefault();
-        alert(`Promedio, ${(nota1 + nota2 + nota3) / 3}`);
-    }
+  const [numero1, setNumero1] = useState(0);
+  const [numero2, setNumero2] = useState(0);
+  const [numero3, setNumero3] = useState(0);
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    alert(`Resultado promedio, ${(numero1 +  numero2 + numero3) / 3}`);
+  };
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <input 
-            type="number" 
-            placeholder='Nota 1'
-            value={nota1}
-            onChange={(e) => setNota1(Number(e.target.value))}
-            />
-            <input 
-            type="number" 
-            placeholder='Nota 2'
-            value={nota2}
-            onChange={(e) => setNota2(Number(e.target.value))}
-            />
-            <input 
-            type="number" 
-            placeholder='Nota 3'
-            value={nota3}
-            onChange={(e) => setNota3(Number(e.target.value))}
-            />
-            <button type="submit">Calcular</button>
-        </form>
-    );
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="number"
+        placeholder="Numero1"
+        value={numero1}
+        onChange={(e) => setNumero1(Number(e.target.value))}
+      />
+      <input
+        type="number"
+        placeholder="Numero2"
+        value={numero2}
+        onChange={(e) => setNumero2(Number(e.target.value))}
+      />
+      <input
+        type="number"
+        placeholder="Numero3"
+        value={numero3}
+        onChange={(e) => setNumero3(Number(e.target.value))}
+      />
+      <button type="submit">Enviar</button>
+    </form>
+  );
 }

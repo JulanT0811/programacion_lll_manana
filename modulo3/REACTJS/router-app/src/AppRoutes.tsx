@@ -5,12 +5,12 @@ import Productos from './pages/Productos';
 import Contacto from './pages/Contacto';
 
 export default function AppRoutes() {
-    return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/productos" element={<Productos />} />
-            <Route path="/contacto" element={<Contacto />} />
-        </Routes>
-    );
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/productos" element={<Productos />} />
+      <Route path="/contacto" element={<Contacto />} />
+    </Routes>
+  );
 }

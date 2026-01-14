@@ -2,7 +2,7 @@
 import { useCallback } from 'react';
 
 interface ListaProps {
-  items: string[];
+  items: number[];
 }
 
 export default function Lista({ items }: ListaProps) {
@@ -14,7 +14,7 @@ export default function Lista({ items }: ListaProps) {
     <ul>
       {items.map(item => (
         <li key={item}>
-          <button onClick={() => handleClick(item)}>{item}</button>
+          <button onClick={() => handleClick(item)}>{item}*3={item*2}</button>
         </li>
       ))}
     </ul>

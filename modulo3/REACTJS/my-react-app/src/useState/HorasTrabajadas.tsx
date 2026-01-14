@@ -1,60 +1,46 @@
 import { useState } from 'react';
 
-export default function CalculadoraSalario() {
-    const [access, setAccess] = useState(false); 
-    const [horas, setHoras] = useState('');
-    const [valorHora, setValorHora] = useState('');
-    const [resultado, setResultado] = useState(0);
+export default function CalculadoraSalarial() {
+  const [horasTotales, setHorasTotales] = useState(0);
+  const [precioHora, setPrecioHora] = useState(0);
+  const [resultado, setResultado] = useState({ ordinario: 0, extra: 0, total: 0 });
 
-    const handleAccess = () => {
-        const h = Number(horas);
-        const v = Number(valorHora);
+  const calcularSalario = () => {
+    const jornadabase = 8;
+    const recargoextra = 0.5; 
+    
+    let horasNormales = 0;
+    let horasExtras = 0;
 
-        if (h > 0 && v > 0) {
-            const success = window.confirm("¿Deseas calcular el salario con horas extras?");
-            if (success) {
-                let total = 0;
-            
-                if (h > 40) {
-                    const extras = h - 40;
-                    total = (40 * v) + (extras * (v * 2));
-                } else {
-                    total = h * v;
-                }
-                
-                setResultado(total);
-                setAccess(true);
-            }
-        } else {
-            window.confirm("Datos inválidos");
-        }
-    };
+    if (horasTotales > jornadabase) {
+      horasNormales = jornadabase;
+      horasExtras = horasTotales - jornadabase;
+    } else {
+      horasNormales = horasTotales;
+      horasExtras = 0;
+    }
 
-    return (
-        <div>
-            {!access ? (
-                <>
-                    <input 
-                        type="number"
-                        value={horas} 
-                        placeholder='Horas trabajadas'
-                        onChange={(e) => setHoras(e.target.value)} /><br />
-                    <input
-                        type="number" 
-                        value={valorHora} 
-                        placeholder='Valor por hora'
-                        onChange={(e) => setValorHora(e.target.value)} /><br />
-                    <button onClick={handleAccess}>
-                        Calcular Salario
-                    </button>
-                </>
-            ) : (
-                <>
-                    <p> Cálculo completado</p>
-                    <p>El salario total es: ${resultado}</p>
-                    <button onClick={() => setAccess(false)}>Regresar</button>
-                </>
-            )}
-        </div>
-    );
+    const pagoOrdinario = horasNormales * precioHora;
+    const pagoExtra = horasExtras * (precioHora * recargoextra);
+
+    setResultado({
+      ordinario: pagoOrdinario,
+      extra: pagoExtra,
+      total: pagoOrdinario + pagoExtra
+    });
+  };
+
+  return (
+    <div>
+      <h3>Calculadora de Salario</h3>
+      <label>Horas trabajadas:</label>
+      <input type="number" onChange={(e) => setHorasTotales(Number(e.target.value))} />
+      <label>Precio por hora:</label>
+      <input type="number" onChange={(e) => setPrecioHora(Number(e.target.value))} />
+      <button onClick={calcularSalario}>Calcular</button>
+      <p>Pago Normal: {resultado.ordinario}</p>
+      <p>Pago Extras: {resultado.extra}</p>
+      <h4>Total a cobrar:{resultado.total}</h4>
+    </div>
+  );
 }
